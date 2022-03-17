@@ -117,6 +117,7 @@ jobs:
           cd build
           python ../configure.py --enable-auto-versioning --enable-optimize --sdks=${{ join(fromJSON(env.SDKS)) }} --mms-path=${{ env.CACHE_PATH }}/metamod --hl2sdk-root=${{ env.CACHE_PATH }} --sm-path=${{ env.CACHE_PATH }}/sourcemod
           ambuild
+          ls
 
       - name: Upload artifact
         if: github.event_name == 'push' && (startsWith(matrix.os, 'ubuntu-18.04') || startsWith(matrix.os, 'windows-2019'))
