@@ -11,8 +11,8 @@
  */
 
 /* Basic information exposed publicly */
-#define SMEXT_CONF_NAME			"classproxy"
-#define SMEXT_CONF_DESCRIPTION	"Provides safe proxying of CTFPlayer::m_iClass"
+#define SMEXT_CONF_NAME			"desiredclassproxy"
+#define SMEXT_CONF_DESCRIPTION	"Provides safe proxying of CTFPlayer::m_iDesiredPlayerClass"
 #ifdef EXT_AUTO_VER
 #define SMEXT_CONF_VERSION		EXT_VERSION_STRING
 #else
@@ -20,7 +20,7 @@
 #endif
 #define SMEXT_CONF_AUTHOR		""
 #define SMEXT_CONF_URL			"https://github.com/Kenzzer/classproxy"
-#define SMEXT_CONF_LOGTAG		"CLASSPROXY"
+#define SMEXT_CONF_LOGTAG		"DESIREDCLASSPROXY"
 #define SMEXT_CONF_LICENSE		"GPL"
 #define SMEXT_CONF_DATESTRING	__DATE__
 

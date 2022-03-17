@@ -16,9 +16,9 @@ std::atomic<std::uint8_t> g_playerClass[34];
 bool ClassProxy::SDK_OnLoad(char* error, size_t maxlen, bool late)
 {
 	sm_sendprop_info_t info;
-	if (!gamehelpers->FindSendPropInfo("CTFPlayer", "m_iClass", &info))
+	if (!gamehelpers->FindSendPropInfo("CTFPlayer", "m_iDesiredPlayerClass", &info))
 	{
-		std::strncpy(error, "Couldn't find network property CTFPlayer::m_iClass!", maxlen);
+		std::strncpy(error, "Couldn't find network property CTFPlayer::m_iDesiredPlayerClass!", maxlen);
 		return false;
 	}
 	this->m_iClass = info.prop;
@@ -77,6 +77,6 @@ cell_t ClassProxy_m_iClass_Set(IPluginContext* pContext, const cell_t* params)
 
 const sp_nativeinfo_t g_NativesInfo[] =
 {
-	{"ClassProxy_m_iClass_Set", ClassProxy_m_iClass_Set},
+	{"ClassProxy_m_iDesiredPlayerClass_Set", ClassProxy_m_iClass_Set},
 	{nullptr, nullptr}
 };
