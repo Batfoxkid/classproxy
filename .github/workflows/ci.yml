@@ -125,7 +125,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: DesiredClassProxy_${{ runner.os }}
-          path: ${{ github.workspace }}/DesiredClassProxy/build/package
+          path: ${{ github.workspace }}/DesiredClassProxy/build/extension
       
       - name: Upload artifact
         if: github.event_name == 'push' && strategy.job-index == 0
